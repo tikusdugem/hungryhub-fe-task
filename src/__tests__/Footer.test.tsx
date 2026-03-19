@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Footer } from '../components/footer'
+import { Footer } from '@/components'
 
 describe('Footer', () => {
   it('renders navigation groups and current year', () => {

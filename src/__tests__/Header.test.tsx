@@ -1,7 +1,7 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 
-import { Header } from '../components/header'
+import { Header } from '@/components'
 
 jest.mock('lucide-react', () => ({
   Menu: (props: React.SVGProps<SVGSVGElement>) => React.createElement('svg', props),

@@ -1,28 +1,7 @@
-import { useState } from 'react'
+import { useNotifyMe } from '@/hooks'
 
 export function NotifyMe() {
-  const [email, setEmail] = useState<string>('')
-
-  const sendEmail = async () => {
-    try {
-      const response = await fetch('/api/notify-me', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      })
-
-      if (!response.ok) {
-        throw new Error(`Error Send Email: ${response.statusText}`)
-      }
-
-      const data = await response.json()
-      console.log(data)
-    } catch (error) {
-      console.error(error)
-    }
-  }
+  const { email, setEmail, sendEmail, isSubmitting } = useNotifyMe()
 
   return (
     <section className="py-20 lg:py-32 bg-foreground">
@@ -43,8 +22,9 @@ export function NotifyMe() {
             onChange={e => setEmail(e.target.value)}
           />
           <button
-            className="border border-background/30 rounded-md px-4 py-2 text-background bg-gray-600 hover:bg-gray-500 cursor-pointer"
+            className="border border-background/30 rounded-md px-4 py-2 text-background bg-gray-600 hover:bg-gray-500 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70"
             onClick={sendEmail}
+            disabled={isSubmitting}
           >
             Notif Me!
           </button>

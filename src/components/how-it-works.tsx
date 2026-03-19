@@ -1,20 +1,4 @@
-const steps = [
-  {
-    step: "1",
-    title: "Browse & Discover",
-    description: "Explore thousands of restaurants and cuisines. Filter by dietary preferences, ratings, and delivery time to find your perfect meal.",
-  },
-  {
-    step: "2",
-    title: "Order & Pay",
-    description: "Select your favorite dishes, customize your order, and checkout securely with multiple payment options available.",
-  },
-  {
-    step: "3",
-    title: "Track & Enjoy",
-    description: "Watch your order in real-time as it's prepared and delivered straight to your door, hot and fresh.",
-  },
-]
+import { steps } from '@/constants'
 
 export function HowItWorks() {
   return (
@@ -38,12 +22,8 @@ export function HowItWorks() {
                 <span className="text-6xl lg:text-7xl font-bold text-border/80 block mb-4">
                   {step.step}
                 </span>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

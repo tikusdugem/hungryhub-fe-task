@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { MenuShowcase } from '../components/menu-showcase'
+import { MenuShowcase } from '@/components'
 
 describe('MenuShowcase', () => {
   const products = [

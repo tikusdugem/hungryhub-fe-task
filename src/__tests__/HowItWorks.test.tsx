@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { HowItWorks } from '../components/how-it-works'
+import { HowItWorks } from '@/components'
 
 describe('HowItWorks', () => {
   it('renders the steps with titles', () => {

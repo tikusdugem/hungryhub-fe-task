@@ -1,0 +1,8 @@
+export { Features } from './features'
+export { Footer } from './footer'
+export { Header } from './header'
+export { Highlight } from './highlight'
+export { HowItWorks } from './how-it-works'
+export { MenuShowcase } from './menu-showcase'
+export { NotifyMe } from './notify-me'
+export { Testimonials } from './testimonials'

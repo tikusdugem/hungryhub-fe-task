@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Testimonials } from '../components/testimonials'
+import { Testimonials } from '@/components'
 
 describe('Testimonials', () => {
   it('renders the testimonials list', () => {

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Features } from '../components/features'
+import { Features } from '@/components'
 
 describe('Features', () => {
   it('renders the section heading and feature items', () => {

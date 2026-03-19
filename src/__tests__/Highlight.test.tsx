@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Highlight } from '../components/highlight'
+import { Highlight } from '@/components'
 
 describe('Highlight', () => {
   it('renders headline, CTA, stats, and hero image', () => {

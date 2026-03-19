@@ -2,40 +2,11 @@
 
 import Image from 'next/image'
 import { Star, Plus } from 'lucide-react'
-import { useEffect, useState } from 'react'
 
-type Products = {
-  id: string
-  img: string
-  name: string
-  dsc: string
-  price: number
-  rate: number
-  country: string
-}
+import { useProducts } from '@/hooks'
 
 export function MenuShowcase() {
-  const [products, setProducts] = useState<Products[]>([])
-
-  // TODO: Handle loading and error states
-  const getProducts = async () => {
-    try {
-      const response = await fetch('/api/products')
-
-      if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`)
-      }
-
-      const data = await response.json()
-      setProducts(data)
-    } catch (error) {
-      console.error('Error fetching products:', error)
-    }
-  }
-
-  useEffect(() => {
-    getProducts()
-  }, [])
+  const { products } = useProducts()
 
   return (
     <section id="menu" className="py-20 lg:py-32 bg-background">
