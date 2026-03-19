@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marketing Landing Page
 
-## Getting Started
+> A mini project for the Hungry Hub frontend assignment.
 
-First, run the development server:
+## Tech Stack
+
+- React
+- TypeScript
+- NextJS
+- Tailwind
+- Lucide React
+- n8n
+- React Testing Library
+- Jest
+- Eslint
+- Prettier
+- Google Sheet
+
+## How to play
+
+### Prerequisites
+
+Make sure you have installed:
+
+- git v2.47.1
+- node v22.14.0
+- yarn v4.10.3 (you can use npm too with v11.5.1)
+
+### Setup
 
 ```bash
-npm run dev
-# or
+# Clone the repository
+git clone git@github.com:tikusdugem/hungryhub-fe-task.git
+
+# Move into the project directory
+cd hungryhub-fe-task
+
+# Create .env file
+cp .env.example .env
+
+# Update the values of .env file
+# Ask the developer or
+PRODUCTS_API_URL=https://free-food-menus-api-two.vercel.app/best-foods
+N8N_WEBHOOK_URL=https://tikusdugem.app.n8n.cloud/webhook/notify-me
+
+# Install dependencies
+yarn
+
+# Play it!
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Test it!
+yarn test
+yarn test:coverage
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Notes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Food API Reference
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://github.com/sachabigou/free-food-menus-api
 
-## Learn More
+### 2. How to make sure n8n automations works
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Just put some email or random string in the input email field and then click the button `Notif Me!`
+- Open this [Google Sheet](https://docs.google.com/spreadsheets/d/1zAqLyrYSUAYG6MMIqDZQ55GDRaFKGP7hG3ACBPPKvEk/edit?usp=sharing) to make sure your email showing.
